@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .container {
+        width: 700px;
+        margin: 50px auto;
+        box-shadow: 0 0 5px #fff;
+      }
+      .video {
+        width: 100%;
+        position: relative;
+      }
+      .video video {
+        width: 100%;
+      }
+      a {
+        opacity: 0;
+        position: absolute;
+        bottom: 100px;
+        right: 50px;
+        background-color: red;
+        padding: 20px;
+        border-radius: 10px;
+        color: aliceblue;
+        text-decoration: none;
+        animation: show 2s linear;
+        animation-delay: 5s;
+      }
+      a.show {
+        opacity: 1;
+        transition: 0.5s;
+      }
+      h1 {
+        text-align: center;
+        color: lightseagreen;
+        padding: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      body {
+        background-color: #000;
+      }
+    </style>
+    <div class="container">
+      <h1>Lab8-Marketing-PS14496</h1>
+      <div class="video">
+        <video src="1.mp4" controls autoplay muted></video>
+        <a id="btn" href="">PS14496 - Đăng Ký</a>
+      </div>
+    </div>
+  </body>
+  <script>
+    let btn = document.getElementById("btn");
+    setTimeout(() => {
+      btn.classList.add("show");
+    }, 5000);
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      location.href = "https://www.tiki.vn";
+    });
+  </script>
+</html>
